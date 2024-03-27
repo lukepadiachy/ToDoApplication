@@ -4,9 +4,9 @@
 
 <h3>TodoList</h3>
 <input type="text" @bind="newToDoItem"/>
-<button @onclick="AddToDoItem">Add</button>
+<button @onclick="AddToDoItem" class="btn btn-outline-primary">Add</button>
 
-<ol>
+<ul>
     @foreach(string todoItem in todoList)
     {
         <li>@todoItem</li>
@@ -15,7 +15,7 @@
     }
 
 
-</ol>
+</ul>
 
 
 @code {
