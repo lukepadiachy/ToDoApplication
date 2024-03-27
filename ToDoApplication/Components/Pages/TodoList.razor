@@ -9,7 +9,7 @@
 <ul>
     @foreach(string todoItem in todoList)
     {
-        <li>@todoItem</li>
+        <li>@todoItem<button @onclick="(()=>DeleteToDoItem(todoItem))">Delete</button></li>
     }
 
 
@@ -27,5 +27,11 @@
             todoList.Add(newToDoItem);
             newToDoItem = "";
         }
+    }
+    void DeleteToDoItem(string todoItemToDelete)
+    {
+        
+        todoList.Remove(todoItemToDelete);
+
     }
 }
