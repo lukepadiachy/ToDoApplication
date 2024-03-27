@@ -22,7 +22,10 @@
 
     void AddToDoItem()
     {
-        todoList.Add(newToDoItem);
-        newToDoItem = "";
+        if (string.IsNullOrWhiteSpace(newToDoItem) == false)
+        {
+            todoList.Add(newToDoItem);
+            newToDoItem = "";
+        }
     }
 }
