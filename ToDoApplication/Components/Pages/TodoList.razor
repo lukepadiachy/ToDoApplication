@@ -10,8 +10,6 @@
     @foreach(string todoItem in todoList)
     {
         <li>@todoItem</li>
-        
-
     }
 
 
@@ -19,12 +17,12 @@
 
 
 @code {
-   List<string> todoList = new() { "Clean The Dishes ", "Make up The Bed" };
+    List<string> todoList = new() { "Clean The Dishes ", "Make up The Bed" };
     string newToDoItem = "";
 
     void AddToDoItem()
     {
         todoList.Add(newToDoItem);
-
+        newToDoItem = "";
     }
 }
